@@ -1,14 +1,7 @@
 class DueDate {
   final DateTime value;
 
-  DueDate(this.value) {
-    final now = DateTime.now();
-    final today = DateTime(now.year, now.month, now.day);
-
-    if (value.isBefore(today)) {
-      throw ArgumentError('Due date cannot be in the past');
-    }
-  }
+  DueDate(this.value);
 
   String get formatted => "${value.year}/${value.month}/${value.day}";
 

@@ -8,10 +8,5 @@ void main() {
       final dueDate = DueDate(futureDate);
       expect(dueDate.value, equals(futureDate));
     });
-
-    test('shoud throw ArgumentError for past date', () {
-      final pastDate = DateTime.now().subtract(Duration(days: 1));
-      expect(() => DueDate(pastDate), throwsArgumentError);
-    });
   });
 }
